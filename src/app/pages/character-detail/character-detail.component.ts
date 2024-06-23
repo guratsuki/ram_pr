@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { RickAndMortyService } from '../../data/services/rick-and-morty.service';
 import { NgIf, NgFor } from '@angular/common';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @Component({
   selector: 'app-character-detail',
   standalone: true,
-  imports: [SharedModule, NgIf, NgFor],
+  imports: [SharedModule, NgIf, NgFor, MatExpansionModule],
   templateUrl: './character-detail.component.html',
   styleUrl: './character-detail.component.scss'
 })
 export class CharacterDetailComponent implements OnInit{
-
+  
   characterId: string = '';
   character = null as any;
   episodes: any[] = [];
+
+  readonly panelOpenState = signal(false);
 
   constructor(
     private actRoute: ActivatedRoute,

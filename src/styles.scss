@@ -1,6 +1,7 @@
 @import "fonts";
 @import "margin";
 
+
 :root{
     --dark-color: #000000;
     --light-color: #FFFFFF;
@@ -22,6 +23,7 @@ body{
     background: var(--dark-color);
     color: var(--light-color);
     background-image: url(/assets/images/background.jpg);
+    //background-color: var(--green-color);
 }
 
 .skill-tag{
@@ -104,3 +106,7 @@ body{
     font-family: Geologica;
     color: var(--light-color);
 }
+/* Importing Bootstrap SCSS file. */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

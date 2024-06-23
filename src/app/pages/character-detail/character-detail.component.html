@@ -1,4 +1,4 @@
-<div *ngIf="character">
+<div *ngIf="character" class="one-character-card">
     <div >
         <div >
             <h1>{{character.name}}</h1>
@@ -6,9 +6,14 @@
                 [src]="character.image"
                 class="character-card-avatar"
             >
-            <h3>{{character.status}}</h3>
-            <h3>{{character.location.name}}</h3>
+            <h3>Status: {{character.status}}</h3>
+            <h3>Gender: {{character.gender}}</h3>
+            <h3>Species: {{character.species}}</h3>
+            <h3>Origin universe: {{character.origin.name}}</h3>
+            <h3>Location: {{character.location.name}}</h3>
         </div>
+        
+    
     </div>
 
     <div *ngFor="let episode of episodes">
