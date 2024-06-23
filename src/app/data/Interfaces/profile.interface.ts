@@ -1,6 +1,6 @@
 export interface Profile{
     id: number,
-    username: string,
+    name: string,
     description: string,
     avatarUrl: string | null,
     subscribersAmount: number,
@@ -8,5 +8,5 @@ export interface Profile{
     lastName: string,
     isActive: boolean,
     stack: string[],
-    city: string,
+    city: string
 }

@@ -12,5 +12,8 @@ export class ProfileService {
 
   getTestAccounts(){
     return this.http.get<Profile[]>(`${this.baseApiUrl}account/test_accounts`)
+    //return this.http.get('https://rickandmortyapi.com/api/character/')
+    //return this.http.get<Profile[]>('https://rickandmortyapi.com/api/character/')
+    //return this.http.get('https://jsonplaceholder.typicode.com/posts')
   }
 }

@@ -1,0 +1,23 @@
+<div *ngIf="character">
+    <div >
+        <div >
+            <h1>{{character.name}}</h1>
+            <img 
+                [src]="character.image"
+                class="character-card-avatar"
+            >
+            <h3>{{character.status}}</h3>
+            <h3>{{character.location.name}}</h3>
+        </div>
+    </div>
+
+    <div *ngFor="let episode of episodes">
+        <div class="character-list">
+            <div class="character-card">
+                <h4>{{episode.name}}</h4>
+                <h4>{{episode.air_date}}</h4>
+                <h4>{{episode.episode}}</h4>
+            </div>
+        </div>
+    </div>
+</div>

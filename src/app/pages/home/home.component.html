@@ -1,0 +1,23 @@
+
+<div class="character-list">
+    <div *ngFor="let profile of characters">
+    <div class="character-card" routerLink='/character-detail/{{profile.id}}'>
+        <h1>{{profile.name}}</h1>
+        <img 
+            [src]="profile.image"
+            class="character-card-avatar"
+        >
+        <h3>{{profile.status}}</h3>
+        <h3>{{profile.location.name}}</h3>
+    </div>
+</div>
+</div>
+
+
+<div
+    infiniteScroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="getCharacters($event)"
+>
+</div>

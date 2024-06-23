@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { SearchPageComponent } from './pages/search-page/search-page.component';
-import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
-import { LayoutComponent } from './common_ui/layout/layout.component';
+import { HomeComponent } from './pages/home/home.component';
+import { EpisodesComponent } from './pages/episodes/episodes.component';
+import { CharacterDetailComponent } from './pages/character-detail/character-detail.component';
+import { NavibarComponent } from './common-ui/navibar/navibar.component';
 
 export const routes: Routes = [
-    {path: '', component: LayoutComponent, children: [
-        {path: 'profile', component: ProfilePageComponent},
-        {path: '', component: SearchPageComponent}
+    {path: '', component: NavibarComponent, children: [
+        {path: '', component: HomeComponent},
+        {path: 'episodes', component: EpisodesComponent},
+        {path: 'character-detail/:id',component: CharacterDetailComponent }
     ]},
-    {path: 'login', component: LoginPageComponent},
+    
     
 ];
