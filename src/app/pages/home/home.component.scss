@@ -3,11 +3,12 @@
     border-radius: 10px;
     margin-top: 10px;
     padding: 20px;
+    backdrop-filter: blur(25px);
 }
 
 .characters-card:hover{
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.459);
+    background: var(--transparent-dark-color)
 }
 
 .characters-card-avatar{
@@ -15,6 +16,7 @@
     height: 100px;
     border-radius: 10%;
     overflow: hidden;
+    box-shadow: 0px 4px 9px var(--transparent-dark-color)
 }
 
 .characters-list{

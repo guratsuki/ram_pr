@@ -7,7 +7,8 @@
     margin: auto;
     width: 50%;
     min-width: 350px;
-    background-color: rgba(12, 48, 68, 0.452);
+    background-color: var(--transparent-dark-color);
+    backdrop-filter: blur(15px);
 }
 
 .one-character-card-avatar{
