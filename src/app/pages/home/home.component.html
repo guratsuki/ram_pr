@@ -4,11 +4,11 @@
         [(ngModel)]="params.name" 
         (input)="searchCharacters()"
         placeholder="Поиск персонажа"
-        class="search-bar"
+        class="search-bar ml20 mb20"
         >
     </div>
 
-    <form class="">
+    <form class="ml20">
         <mat-form-field >
             <mat-label class="select-form">Filter by status</mat-label>
             <mat-select [(ngModel)]="params.status" name="status" (selectionChange)="filterCharacters()">
@@ -19,7 +19,7 @@
         </mat-form-field>
     </form>
 
-    <form class="ml20 select-form">
+    <form class="ml20">
         <mat-form-field>
             <mat-label class="select-form">Filter by gender</mat-label>
             <mat-select [(ngModel)]="params.gender" name="gender" (selectionChange)="filterCharacters()">
