@@ -23,3 +23,21 @@
     gap: 20px;
     padding: 10px;
 }
+
+.search-bar{
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    margin: 20px;
+    font-size: 15px;
+    font-family: Geologica-Reg;
+}
+
+.filter{
+    display: flex;
+    align-items: flex-end;
+}
+
+.select-form{
+    font-family: Geologica-Reg;
+}

@@ -1,33 +1,50 @@
+<div class="filter">
+    <div>
+        <input type="text" 
+        [(ngModel)]="params.name" 
+        (input)="searchCharacters()"
+        placeholder="Поиск персонажа"
+        class="search-bar"
+        >
+    </div>
+
+    <form class="">
+        <mat-form-field >
+            <mat-label class="select-form">Filter by status</mat-label>
+            <mat-select [(ngModel)]="params.status" name="status" (selectionChange)="filterCharacters()">
+            @for (status of statuses; track status) {
+            <mat-option class="select-form" [value]="status.value">{{status.viewValue}}</mat-option>
+            }
+            </mat-select>
+        </mat-form-field>
+    </form>
+
+    <form class="ml20 select-form">
+        <mat-form-field>
+            <mat-label class="select-form">Filter by gender</mat-label>
+            <mat-select [(ngModel)]="params.gender" name="gender" (selectionChange)="filterCharacters()">
+            @for (gender of genders; track gender) {
+            <mat-option class="select-form" [value]="gender.value">{{gender.viewValue}}</mat-option>
+            }
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+
+
 <div class="characters-list">
     <div *ngFor="let profile of characters">
         <div class="characters-card " routerLink='/character-detail/{{profile.id}}'>
             <h1 class="">{{profile.name}}</h1>
             <img 
                 [src]="profile.image"
-                class="characters-card-avatar"
+                class="characters-card-avatar mb10 mt5"
             >
             <h3>Status: {{profile.status}}</h3>
             <h3>Location: {{profile.location.name}}</h3>
         </div>
     </div>
 </div>
-
-<!-- <div class="container character-list">
-    <mat-card *ngFor="let profile of characters">
-        <div class="character-card">
-            <mat-card-title>{{profile.name}}</mat-card-title>
-        <img 
-                [src]="profile.image"
-                class="character-card-avatar"
-        >
-        <mat-card-content>
-            <h3>Status: {{profile.status}}</h3>
-            <h3>Location: {{profile.location.name}}</h3>
-        </mat-card-content>
-        </div>
-        
-    </mat-card>
-</div> -->
 
 <div
     infiniteScroll

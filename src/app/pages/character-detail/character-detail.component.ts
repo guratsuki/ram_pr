@@ -32,8 +32,6 @@ export class CharacterDetailComponent implements OnInit{
   ngOnInit() {
     this.getCharacter()
   }
-
-
   
   getCharacter(){
     this.RickAndMortySvc.getCharacterById(this.characterId).subscribe({

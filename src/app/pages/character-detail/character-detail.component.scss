@@ -2,7 +2,33 @@
     border: 1px solid var(--light-color);
     padding: 20px;
     border-radius: 10px;
-    margin-top: 10px;
     text-align: center;
+    margin: 10px;
+    margin: auto;
+    width: 50%;
+    min-width: 350px;
+    background-color: rgba(12, 48, 68, 0.452);
+}
 
+.one-character-card-avatar{
+    border-radius: 10%;
+}
+
+.episodes-card{
+    margin-bottom: 10px;
+    border: 1px solid black;
+    
+}
+
+.character-description{
+    text-align: left;
+    //background-color: transparent;
+}
+
+.gender-img{
+    width: 20px;
+}
+
+.gen{
+    display: flex;
 }

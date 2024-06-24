@@ -1,28 +1,44 @@
 <div *ngIf="character" class="one-character-card">
-    <div >
+    <div class="mb32">
         <div >
-            <h1>{{character.name}}</h1>
+            <h1 class="mb16">{{character.name}}</h1>
             <img 
                 [src]="character.image"
-                class="character-card-avatar"
+                class="one-character-card-avatar mb16"
             >
-            <h3>Status: {{character.status}}</h3>
-            <h3>Gender: {{character.gender}}</h3>
-            <h3>Species: {{character.species}}</h3>
-            <h3>Origin universe: {{character.origin.name}}</h3>
-            <h3>Location: {{character.location.name}}</h3>
+            <div class="character-description">
+                <h3>Status: {{character.status}}</h3>
+                <div class="gen">
+                    <h3>Gender: {{character.gender}}</h3>
+                    @if(character.gender == 'Male'){
+                        <img class="gender-img ml10" src="/assets/svg/male.svg">
+                    }
+                    @else if (character.gender == 'Female') {
+                        <img class="gender-img ml10"  src="/assets/svg/female.svg">
+                    }
+                    @else {
+                        <img class="gender-img ml10"  src="/assets/svg/unknown.svg">
+                    }
+                </div>
+                <h3>Species: {{character.species}}</h3>
+                <h3>Origin universe: {{character.origin.name}}</h3>
+                <h3>Location: {{character.location.name}}</h3>
+            </div>
+            
         </div>
-        
-    
     </div>
 
-    <div *ngFor="let episode of episodes">
-        <div class="character-list">
-            <div class="character-card">
-                <h4>{{episode.name}}</h4>
-                <h4>{{episode.air_date}}</h4>
-                <h4>{{episode.episode}}</h4>
-            </div>
+    <mat-expansion-panel hideToggle class="mat-panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title> List of episodes: </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let episode of episodes">
+                <div class="episodes-card">
+                    <h4>Epiosde name: {{episode.name}}</h4>
+                    <h4>Episode air date: {{episode.air_date}}</h4>
+                    <h4>Episode number: {{episode.episode}}</h4>
+                </div>
+           
         </div>
-    </div>
+      </mat-expansion-panel>
 </div>
