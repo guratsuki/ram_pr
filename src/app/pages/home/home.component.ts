@@ -69,11 +69,9 @@ export class HomeComponent implements OnInit {
         this.characters.push(...res.results)
         console.log(this.characters)
 
-        if (event) event.target.complete()
-
       },
       error: (error: any) => {
-        if (event) event.target.complete()
+        console.log("That's all")
       }
     })
   }

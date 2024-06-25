@@ -8,6 +8,8 @@
     --primary-color: #AE7AFF;
     --transparent-dark-color: rgba(9, 24, 32, 0.45);
     --dark-gray-color: rgb(31,35,39);
+    --dark-green-color: rgba(9, 63, 18, 0.6);
+    --acid-green-color: rgb(27, 236, 27);
 }
 
 *,
@@ -20,9 +22,8 @@
 
 body{
     font-family: Geologica-Reg;
-    background: var(--dark-color);
     color: var(--light-color);
-    background-image: url(/assets/images/background2.jpg);
+    background-image: url(/assets/images/background.jpg);
     background-size: cover;
     background-attachment:fixed;
 }
